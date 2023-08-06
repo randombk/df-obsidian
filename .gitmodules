@@ -1,0 +1,4 @@
+[submodule "dfhack"]
+	path = dfhack
+	url = https://github.com/DFHack/dfhack.git
+	branch = master
