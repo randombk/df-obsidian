@@ -13,8 +13,8 @@ Dwarf Fortress Map Renderer for [Project Obsidian](https://github.com/EdwardJXLi
 ## Usage
 
 1. Run Dwarf Fortress with the `dfhack` plugin enabled.
-    * You must reload your world every time you restart Project Obsidian, as `dfhack` will only send map updates about changed chunks.
     * All DF versions `>=0.47` are officially supported, including DF Premium. Versions `>=0.31` should work with minor tweaks. Mods are not supported, but may work.
+    * For `dfhack` versions before 50.09-r3, You must reload your world every time you restart Project Obsidian, as `dfhack` will only send map updates about changed chunks.
 2. Create a file called `default.df` in your Project Obsidian `worlds` directory with the contents `localhost:5555`.
     * This can be changed to any other host/port combination, with corresponding edits to DFHack configuration.
 3. Edit ProjectObsidian's `configs/server.json` and set `"defaultSaveFormat": "DFObsidian"`.

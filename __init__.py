@@ -44,7 +44,7 @@ async def GetViewInfo(output: ViewInfo = None): pass
 async def GetUnitList(output: UnitList = None): pass
 
 @remote(plugin='RemoteFortressReader')
-async def GetBlockList(input: BlockRequest, output: BlockList = None): pass
+async def GetBlockList(input: BlockRequest, output: BlockList = None,): pass
 
 @remote(plugin='RemoteFortressReader')
 async def GetTiletypeList(output: TiletypeList = None): pass
@@ -216,6 +216,7 @@ class DFObsidianModule(AbstractModule):
             Logger.info(f"  => Processing Z-level {df_z}...", module="DFObsidian")
             start_time = time.time()
             request = BlockRequest()
+            request.force_reload = True
             request.min_x = 0
             request.min_y = 0
             request.min_z = df_z
