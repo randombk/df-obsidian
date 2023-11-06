@@ -133,7 +133,11 @@ def hasBlock(
         return False
 
     # Check if the tile is solid by checking if the top middle is solid
-    value = orig_tilemap[x + map_max_x_tiles * y][1]
+    orig_tile = orig_tilemap[x + map_max_x_tiles * y]
+    if orig_tile is None:
+        return False
+    
+    value = orig_tile[1]
     tileData = value[1]
     if tileData is None or type(tileData) == int:
         return False
